@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Hosting VPS</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#05060f;
+color:white;
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+body::before{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#10b98155,transparent);
+top:-100px;
+left:-100px;
+animation:moveBg 8s infinite alternate;
+z-index:-1;
+}
+@keyframes moveBg{
+0%{transform:translate(0,0);}
+100%{transform:translate(200px,200px);}
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:15px 40px;
+background:#02030a;
+}
+nav a{color:#aaa;text-decoration:none;margin:0 10px;}
+nav a:hover{color:white}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:60px 20px 10px;
+}
+.hero h1{
+font-size:48px;
+background:linear-gradient(270deg,#10b981,#059669,#10b981);
+background-size:400% 400%;
+-webkit-background-clip:text;
+color:transparent;
+animation:gradientMove 5s infinite;
+}
+@keyframes gradientMove{
+0%{background-position:0%}
+100%{background-position:100%}
+}
+
+/* GRID */
+.plans-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+padding:20px;
+}
+
+/* CARD */
+.pcard{
+background:linear-gradient(145deg,#0d1025,#111430);
+border:1px solid rgba(16,185,129,0.3);
+padding:30px;
+width:280px;
+border-radius:18px;
+transition:0.4s;
+position:relative;
+}
+.pcard:hover{
+transform:translateY(-12px) scale(1.05);
+box-shadow:0 0 40px rgba(16,185,129,0.6);
+}
+
+/* LIST */
+.pcard ul{
+list-style:none;
+padding:0;
+margin:15px 0;
+}
+.pcard ul li{
+font-size:14px;
+color:#ccc;
+padding:4px 0;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+/* 🔥 ZYROCLOUD STYLE BUTTON */
+.buy-btn{
+display:block;
+text-align:center;
+padding:14px;
+border-radius:30px;
+font-weight:bold;
+font-size:15px;
+color:white;
+text-decoration:none;
+background:linear-gradient(90deg,#ff7a00,#ff2d55);
+box-shadow:0 8px 30px rgba(255,70,50,0.4);
+position:relative;
+overflow:hidden;
+transition:0.3s;
+}
+
+/* SHINE EFFECT */
+.buy-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+transition:0.5s;
+}
+.buy-btn:hover::before{
+left:100%;
+}
+.buy-btn:hover{
+transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div><b>Dark Hosting</b></div>
+<div>
+<a href="index.html">Home</a>
+</div>
+</nav>
+
+<div class="hero">
+<h1>High Performance VPS</h1>
+<p>⚡ High Performance VPS by Dark Hosting</p>
+</div>
+
+<div class="plans-grid">
+
+<!-- XS -->
+<div class="pcard">
+<h3>💠 EPYC Premium XS</h3>
+<p>₹549 /mo</p>
+<ul>
+<li>⚙ 2 vCores</li>
+<li>🧠 6GB RAM</li>
+<li>💾 50GB NVMe</li>
+<li>🌐 1Gbps</li>
+</ul>
+<a href="https://discord.gg/aMh3sM5p" target="_blank" class="buy-btn">Order Now</a>
+</div>
+
+<!-- S -->
+<div class="pcard">
+<h3>💠 EPYC Premium S</h3>
+<p>₹649 /mo</p>
+<ul>
+<li>⚙ 2 vCores</li>
+<li>🧠 8GB RAM</li>
+<li>💾 80GB NVMe</li>
+<li>🌐 1Gbps</li>
+</ul>
+<a href="https://discord.gg/aMh3sM5p" target="_blank" class="buy-btn">Order Now</a>
+</div>
+
+<!-- M -->
+<div class="pcard">
+<h3>💠 EPYC Premium M</h3>
+<p>₹849 /mo</p>
+<ul>
+<li>⚙ 4 vCores</li>
+<li>🧠 12GB RAM</li>
+<li>💾 100GB NVMe</li>
+<li>🌐 1Gbps</li>
+</ul>
+<a href="https://discord.gg/aMh3sM5p" target="_blank" class="buy-btn">Order Now</a>
+</div>
+
+<!-- L -->
+<div class="pcard">
+<h3>💎 EPYC Premium L</h3>
+<p>₹1099 /mo</p>
+<ul>
+<li>⚙ 6 vCores</li>
+<li>🧠 16GB RAM</li>
+<li>💾 150GB NVMe</li>
+</ul>
+<a href="https://discord.gg/aMh3sM5p" target="_blank" class="buy-btn">Order Now</a>
+</div>
+
+<!-- XL -->
+<div class="pcard">
+<h3>🚀 EPYC Premium XL</h3>
+<p>₹1449 /mo</p>
+<ul>
+<li>⚙ 6 vCores</li>
+<li>🧠 24GB RAM</li>
+<li>💾 200GB NVMe</li>
+</ul>
+<a href="https://discord.gg/aMh3sM5p" target="_blank" class="buy-btn">Order Now</a>
+</div>
+
+<!-- XXL -->
+<div class="pcard">
+<h3>🔥 EPYC Premium XXL</h3>
+<p>₹1749 /mo</p>
+<ul>
+<li>⚙ 8 vCores</li>
+<li>🧠 32GB RAM</li>
+<li>💾 300GB NVMe</li>
+</ul>
+<a href="https://discord.gg/aMh3sM5p" target="_blank" class="buy-btn">Order Now</a>
+</div>
+
+</div>
+
+</body>
+</html>

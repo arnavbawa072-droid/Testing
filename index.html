@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Hosting</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* NAVBAR FIX + BLUR */
+.navbar{
+position:sticky;
+top:0;
+backdrop-filter:blur(10px);
+background:rgba(5,6,15,0.7);
+z-index:1000;
+}
+
+/* HERO EXTRA */
+.hero-left h1{
+animation:fadeUp 1s ease forwards;
+}
+
+.hero-left p{
+animation:fadeUp 1.3s ease forwards;
+}
+
+/* BUTTON ANIMATION */
+.primary:hover{
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 0 25px #6366f1;
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:all 0.8s ease;
+}
+
+.reveal.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* CARD HOVER */
+.owner, .fbox{
+transition:0.4s;
+}
+
+.owner:hover, .fbox:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 0 30px #6366f1;
+}
+
+/* FADE KEYFRAME */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* ===== FOOTER (NEW FIXED) ===== */
+.footer{
+margin-top:80px;
+padding:60px 20px 20px;
+background:linear-gradient(180deg,#05060f,#02030a);
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container{
+max-width:1200px;
+margin:0 auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+}
+
+.footer-box h3{
+margin-bottom:10px;
+}
+
+.footer-box p{
+color:#aaa;
+font-size:14px;
+margin:6px 0;
+}
+
+.footer-box a{
+display:block;
+color:#aaa;
+text-decoration:none;
+margin:6px 0;
+transition:0.3s;
+}
+
+.footer-box a:hover{
+color:white;
+transform:translateX(5px);
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+padding-top:15px;
+border-top:1px solid rgba(255,255,255,0.05);
+color:#777;
+font-size:14px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="bg"></div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo-box" onclick="location.reload()">
+    <img src="logo.png" class="logo-img">
+    <span class="logo-text">Dark Hosting</span>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="services.html">Services</a>
+    <a href="location.html">Locations</a>
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://discord.gg/Bnq87TZd" class="discord" target="_blank">Discord</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero reveal">
+
+  <div class="hero-left">
+    <h1>Powerful Hosting for <span>Gamers & Developers</span></h1>
+    <p>Fast, reliable and secure hosting built for performance.</p>
+
+    <div class="hero-buttons">
+      <button class="primary" onclick="location.href='services.html'">
+        Get Started
+      </button>
+      <button class="secondary" onclick="window.open('https://discord.gg/Bnq87TZd')">
+        Join Discord
+      </button>
+    </div>
+  </div>
+
+  <div class="hero-right float">
+    <div class="glass-card">
+      <div class="box"><h3>99.9%</h3><p>Uptime</p></div>
+      <div class="box"><h3>Low Ping</h3><p>India Nodes</p></div>
+      <div class="box"><h3>NVMe</h3><p>Fast Storage</p></div>
+      <div class="box"><h3>24/7</h3><p>Support</p></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- OWNERS -->
+<section class="owners reveal">
+  <h2>Meet Our Owners</h2>
+  <p class="sub">People behind Dark Hosting</p>
+
+  <div class="owners-box">
+    <div class="owner">
+      <h3>THE_GAMING_ZONE</h3>
+      <p>Founder</p>
+    </div>
+
+    <div class="owner">
+      <h3>CONICDARK</h3>
+      <p>Co-Founder</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features reveal" id="features">
+  <h2>Why Dark Hosting?</h2>
+  <p class="sub">Built for speed & reliability</p>
+
+  <div class="feature-grid">
+    <div class="fbox"><h3>⚡ Fast Servers</h3><p>High performance CPUs</p></div>
+    <div class="fbox"><h3>🌍 Low Latency</h3><p>Smooth gameplay</p></div>
+    <div class="fbox"><h3>🔒 Secure</h3><p>DDoS Protection</p></div>
+    <div class="fbox"><h3>🛠 Easy Panel</h3><p>Full control</p></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq reveal" id="faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item" onclick="toggleFAQ(this)">
+    What is Dark Hosting?
+    <p>We provide high performance hosting services.</p>
+  </div>
+
+  <div class="faq-item" onclick="toggleFAQ(this)">
+    Do you provide support?
+    <p>Yes, 24/7 support via Discord.</p>
+  </div>
+
+</section>
+
+<!-- ✅ ONLY UPDATED FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2 class="logo-text">Dark Hosting</h2>
+      <p>Fast, reliable and secure hosting built for performance.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Navigation</h3>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="location.html">Locations</a>
+      <a href="minecraft.html">Minecraft</a>
+      <a href="vps.html">VPS</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Hosting</h3>
+      <a href="minecraft.html">Minecraft Hosting</a>
+      <a href="vps.html">VPS Plans</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Community</h3>
+      <a href="https://discord.gg/Bnq87TZd" target="_blank">Discord</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Dark Hosting • All Rights Reserved
+  </div>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+
+/* FAQ */
+function toggleFAQ(el){
+  let p = el.querySelector("p");
+  p.style.display = p.style.display === "block" ? "none" : "block";
+}
+
+/* SCROLL ANIMATION */
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll('.reveal').forEach(el=>{
+  observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - Dark Hosting</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.main{
+  display:flex;
+  padding:40px;
+  gap:30px;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:220px;
+  background:rgba(255,255,255,0.05);
+  border-radius:15px;
+  padding:20px;
+}
+
+.sidebar a{
+  display:block;
+  padding:10px;
+  margin-bottom:10px;
+  color:#aaa;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+  background:#1a1a2e;
+  color:white;
+}
+
+/* CONTENT */
+.content{
+  flex:1;
+}
+
+.service{
+  display:none;
+  animation:fade 0.5s ease;
+}
+
+.service.active{
+  display:block;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:20px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px #6366f1;
+}
+</style>
+
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header class="navbar">
+  <div class="logo-box" onclick="location.href='index.html'">
+    <img src="logo.png" class="logo-img">
+    <span class="logo-text">Dark Hosting</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Services</a>
+    <a href="location.html">Locations</a>
+    <a href="index.html#features">Features</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="https://discord.gg/Bnq87TZd" class="discord" target="_blank">Discord</a>
+  </nav>
+</header>
+
+<div class="main">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h3>Categories</h3>
+
+    <a onclick="show('mc')">🎮 Minecraft Hosting</a>
+    <a onclick="show('vps')">☁️ VPS Hosting</a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- MINECRAFT -->
+    <div id="mc" class="service active">
+      <div class="card">
+        <h2>Minecraft Hosting</h2>
+        <p>
+          Experience ultra-fast Minecraft hosting with optimized performance, low latency,
+          and powerful hardware. Perfect for survival servers, modpacks, and large communities.
+        </p>
+
+        <button class="primary" onclick="location.href='minecraft.html'">
+          View Plans
+        </button>
+      </div>
+    </div>
+
+    <!-- VPS -->
+    <div id="vps" class="service">
+      <div class="card">
+        <h2>AMD VPS Hosting</h2>
+        <p>
+          Get high-performance VPS powered by AMD Ryzen CPUs. Ideal for hosting websites,
+          bots, game servers, and more with full root access and maximum control.
+        </p>
+
+        <button class="primary" onclick="location.href='vps.html'">
+          View Plans
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<<!-- ✅ ONLY UPDATED FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2 class="logo-text">Dark Hosting</h2>
+      <p>Fast, reliable and secure hosting built for performance.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Navigation</h3>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="location.html">Locations</a>
+      <a href="minecraft.html">Minecraft</a>
+      <a href="vps.html">VPS</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Hosting</h3>
+      <a href="minecraft.html">Minecraft Hosting</a>
+      <a href="vps.html">VPS Plans</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Community</h3>
+      <a href="https://discord.gg/Bnq87TZd" target="_blank">Discord</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Dark Hosting • All Rights Reserved
+  </div>
+</footer>
+
+<script>
+function show(type){
+  document.querySelectorAll('.service').forEach(s => s.classList.remove('active'));
+  document.getElementById(type).classList.add('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Locations - Dark Hosting</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* SECTION */
+.map-section{
+text-align:center;
+padding:100px 20px;
+}
+
+/* MAP BOX */
+.map-box{
+position:relative;
+max-width:950px;
+margin:50px auto;
+animation:fadeIn 1s ease;
+}
+
+/* MAP */
+.map{
+width:100%;
+opacity:0.9;
+border-radius:20px;
+}
+
+/* NODE */
+.node{
+position:absolute;
+width:14px;
+height:14px;
+background:#22c55e;
+border-radius:50%;
+box-shadow:0 0 15px #22c55e;
+animation:pulse 1.5s infinite;
+}
+
+/* PULSE */
+@keyframes pulse{
+0%{transform:scale(1);opacity:1}
+50%{transform:scale(1.6);opacity:0.4}
+100%{transform:scale(1);opacity:1}
+}
+
+/* LABEL */
+.node-label{
+position:absolute;
+top:18px;
+left:-25px;
+font-size:12px;
+color:#aaa;
+}
+
+/* FADE */
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="bg"></div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="logo-box" onclick="location.href='index.html'">
+<img src="logo.png" class="logo-img">
+<span class="logo-text">Dark Hosting</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="#">Locations</a>
+<a href="index.html#features">Features</a>
+<a href="index.html#faq">FAQ</a>
+<a href="https://discord.gg/Bnq87TZd" class="discord" target="_blank">Discord</a>
+</nav>
+</header>
+
+<!-- TITLE -->
+<section class="map-section reveal">
+
+<h1>Our <span>Server Locations</span></h1>
+<p class="sub">Global infrastructure for low latency and high performance</p>
+
+<div class="map-box reveal">
+
+<!-- MAP IMAGE -->
+<img src="map.png" class="map">
+
+<!-- INDIA -->
+<div class="node" style="top:42%; left:68%;">
+<div class="node-label">India</div>
+</div>
+
+<!-- EUROPE -->
+<div class="node" style="top:30%; left:52%;">
+<div class="node-label">Europe</div>
+</div>
+
+<!-- USA -->
+<div class="node" style="top:35%; left:25%;">
+<div class="node-label">USA</div>
+</div>
+
+<!-- SINGAPORE -->
+<div class="node" style="top:58%; left:80%;">
+<div class="node-label">Singapore</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ✅ ONLY UPDATED FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2 class="logo-text">Dark Hosting</h2>
+      <p>Fast, reliable and secure hosting built for performance.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Navigation</h3>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="location.html">Locations</a>
+      <a href="minecraft.html">Minecraft</a>
+      <a href="vps.html">VPS</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Hosting</h3>
+      <a href="minecraft.html">Minecraft Hosting</a>
+      <a href="vps.html">VPS Plans</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Community</h3>
+      <a href="https://discord.gg/Bnq87TZd" target="_blank">Discord</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Dark Hosting • All Rights Reserved
+  </div>
+</footer>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll('.reveal').forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>

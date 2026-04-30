@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Hosting - Dark Hosting</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* HERO */
+.pricing-hero{
+text-align:center;
+padding:100px 20px 40px;
+}
+
+.pricing-hero h1{
+font-size:45px;
+}
+
+.pricing-hero span{
+background:linear-gradient(90deg,#6366f1,#8b5cf6);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* GRID */
+.pricing-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+padding:60px;
+}
+
+/* CARD (FIXED PROFESSIONAL) */
+.plan{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:18px;
+transition:all 0.35s ease;
+position:relative;
+overflow:hidden;
+}
+
+/* HOVER */
+.plan:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 40px rgba(99,102,241,0.35);
+}
+
+/* GLOW EFFECT */
+.plan::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent);
+opacity:0;
+transition:0.5s;
+}
+
+.plan:hover::after{
+opacity:1;
+}
+
+/* POPULAR */
+.popular{
+border:2px solid #8b5cf6;
+}
+
+.popular::before{
+content:"MOST POPULAR";
+position:absolute;
+top:12px;
+right:-45px;
+background:#8b5cf6;
+padding:5px 45px;
+transform:rotate(45deg);
+font-size:12px;
+}
+
+/* PRICE */
+.price{
+font-size:28px;
+margin:10px 0;
+color:#6366f1;
+}
+
+/* LIST */
+.plan ul{
+list-style:none;
+margin:15px 0;
+}
+
+.plan li{
+margin:6px 0;
+color:#aaa;
+}
+
+/* BUTTON */
+.buy{
+display:block;
+width:100%;
+padding:12px;
+border-radius:10px;
+background:linear-gradient(90deg,#6366f1,#8b5cf6);
+color:white;
+text-align:center;
+text-decoration:none;
+transition:0.3s;
+}
+
+.buy:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #6366f1;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="bg"></div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="logo-box" onclick="location.href='index.html'">
+<img src="logo.png" class="logo-img">
+<span class="logo-text">Dark Hosting</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="location.html">Locations</a>
+<a href="index.html#features">Features</a>
+<a href="index.html#faq">FAQ</a>
+<a href="https://discord.gg/Bnq87TZd" class="discord" target="_blank">Discord</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="pricing-hero reveal">
+<h1>Minecraft <span>Hosting Plans</span></h1>
+<p class="sub">Powerful, lag-free servers for every player size</p>
+</section>
+
+<!-- PLANS -->
+<section class="pricing-grid">
+
+<div class="plan reveal">
+<h2>Starter</h2>
+<div class="price">₹99/month</div>
+<ul>
+<li>Supports 10-20 Players</li>
+<li>3GB RAM Optimized CPU</li>
+<li>25GB SSD Storage</li>
+<li>Basic Plugins Support</li>
+<li>1.5TB Bandwidth</li>
+</ul>
+<a href="https://discord.gg/Bnq87TZd" target="_blank" class="buy">Buy Now</a>
+</div>
+
+<div class="plan popular reveal">
+<h2>Plus</h2>
+<div class="price">₹179/month</div>
+<ul>
+<li>Supports 20-40 Players</li>
+<li>6GB RAM High CPU</li>
+<li>50GB NVMe Storage</li>
+<li>Plugins + Small Mods</li>
+<li>3TB Bandwidth</li>
+</ul>
+<a href="https://discord.gg/Bnq87TZd" target="_blank" class="buy">Buy Now</a>
+</div>
+
+<div class="plan reveal">
+<h2>Pro</h2>
+<div class="price">₹299/month</div>
+<ul>
+<li>Supports 40-70 Players</li>
+<li>8GB RAM Strong Performance</li>
+<li>80GB NVMe Storage</li>
+<li>Heavy Plugins Support</li>
+<li>Unlimited Bandwidth</li>
+</ul>
+<a href="https://discord.gg/Bnq87TZd" target="_blank" class="buy">Buy Now</a>
+</div>
+
+<div class="plan reveal">
+<h2>Ultra</h2>
+<div class="price">₹399/month</div>
+<ul>
+<li>Supports 70-100 Players</li>
+<li>12GB RAM High-End CPU</li>
+<li>120GB NVMe Storage</li>
+<li>Mods + Plugins</li>
+<li>Unlimited Bandwidth</li>
+</ul>
+<a href="https://discord.gg/Bnq87TZd" target="_blank" class="buy">Buy Now</a>
+</div>
+
+<div class="plan reveal">
+<h2>Extreme</h2>
+<div class="price">₹499/month</div>
+<ul>
+<li>Supports 100+ Players</li>
+<li>16GB RAM Maximum Performance</li>
+<li>160GB NVMe Storage</li>
+<li>Heavy Mods + Networks</li>
+<li>Unlimited Bandwidth</li>
+</ul>
+<a href="https://discord.gg/Bnq87TZd" target="_blank" class="buy">Buy Now</a>
+</div>
+
+</section>
+
+<!-- ✅ ONLY UPDATED FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2 class="logo-text">Dark Hosting</h2>
+      <p>Fast, reliable and secure hosting built for performance.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Navigation</h3>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="location.html">Locations</a>
+      <a href="minecraft.html">Minecraft</a>
+      <a href="vps.html">VPS</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Hosting</h3>
+      <a href="minecraft.html">Minecraft Hosting</a>
+      <a href="vps.html">VPS Plans</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Community</h3>
+      <a href="https://discord.gg/Bnq87TZd" target="_blank">Discord</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Dark Hosting • All Rights Reserved
+  </div>
+</footer>
+
+<script>
+const observer=new IntersectionObserver(e=>{
+e.forEach(x=>{
+if(x.isIntersecting){
+x.target.classList.add("show");
+}
+});
+});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

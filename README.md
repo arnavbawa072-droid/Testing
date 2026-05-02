@@ -68,15 +68,22 @@ text-shadow:0 0 12px rgba(139,92,246,0.6);
   <p class="sub">People behind Dark Hosting</p>
 
   <div class="owners-box">
+
     <div class="owner">
       <h3>THE_GAMING_ZONE</h3>
       <p>Founder • Handles development, servers and backend systems.</p>
+    </div>
+
+     <div class="owner">
+      <h3>ITZ DRAGON YT</h3>
+      <p>Founder • Handles security, backend infrastructure and protection systems.</p>
     </div>
 
     <div class="owner">
       <h3>CONICDARK</h3>
       <p>Co-Founder • Handles support, management and user experience.</p>
     </div>
+
   </div>
 </section>
 

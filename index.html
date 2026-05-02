@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Hosting</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.logo-text{
+font-weight:700;
+background:linear-gradient(90deg,#6366f1,#8b5cf6,#a855f7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+letter-spacing:0.5px;
+text-shadow:0 0 12px rgba(139,92,246,0.6);
+}
+</style>
+
+</head>
+<body>
+
+<div class="bg"></div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo-box" onclick="location.reload()">
+    <img src="logo.png" class="logo-img">
+    <span class="logo-text">Dark Hosting</span>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="services.html">Services</a>
+    <a href="location.html">Locations</a>
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://discord.gg/Bnq87TZd" target="_blank">Discord</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <div class="hero-left">
+    <h1>Power your servers with <span>dark hosting</span></h1>
+    <p>Fast, reliable and secure hosting built for performance.</p>
+
+    <div class="hero-buttons">
+      <button class="primary" onclick="location.href='services.html'">Get Started</button>
+      <button class="secondary" onclick="window.open('https://discord.gg/Bnq87TZd')">Join Discord</button>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="glass-card">
+      <div class="box"><h3>99.9%</h3><p>Uptime</p></div>
+      <div class="box"><h3>Low Ping</h3><p>India Nodes</p></div>
+      <div class="box"><h3>NVMe</h3><p>Fast Storage</p></div>
+      <div class="box"><h3>24/7</h3><p>Support</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNERS -->
+<section class="owners reveal">
+  <h2>Meet Our Owners</h2>
+  <p class="sub">People behind Dark Hosting</p>
+
+  <div class="owners-box">
+
+    <div class="owner">
+      <h3>THE_GAMING_ZONE</h3>
+      <p>Founder • Handles development, servers and backend systems.</p>
+    </div>
+
+     <div class="owner">
+      <h3>ITZ DRAGON YT</h3>
+      <p>Founder • Handles security, backend infrastructure and protection systems.</p>
+    </div>
+
+    <div class="owner">
+      <h3>CONICDARK</h3>
+      <p>Co-Founder • Handles support, management and user experience.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features reveal" id="features">
+  <h2>Why Dark Hosting?</h2>
+
+  <div class="feature-grid">
+    <div class="fbox"><h3>⚡ Fast Servers</h3></div>
+    <div class="fbox"><h3>🌍 Low Latency</h3></div>
+    <div class="fbox"><h3>🔒 Secure</h3></div>
+    <div class="fbox"><h3>🛠 Easy Panel</h3></div>
+  </div>
+</section>
+
+<!-- ⭐ REVIEWS -->
+<section class="reviews reveal">
+  <h2>What Customers Say</h2>
+  <p class="sub">Trusted by our community</p>
+
+  <div class="review-box">
+
+    <div class="review-card">
+      <h3>Rohan</h3>
+      <p class="stars">⭐⭐⭐⭐⭐</p>
+      <p>Low ping and smooth gameplay. Best hosting I’ve used.</p>
+    </div>
+
+    <div class="review-card">
+      <h3>Amit</h3>
+      <p class="stars">⭐⭐⭐⭐⭐</p>
+      <p>Setup was instant and support is very fast.</p>
+    </div>
+
+    <div class="review-card">
+      <h3>Sahil</h3>
+      <p class="stars">⭐⭐⭐⭐⭐</p>
+      <p>Affordable pricing and no lag. Highly recommended.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq reveal" id="faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item" onclick="toggleFAQ(this)">
+    What is Dark Hosting?
+    <p>We provide high-performance Minecraft and VPS hosting.</p>
+  </div>
+
+  <div class="faq-item" onclick="toggleFAQ(this)">
+    How can I buy a server?
+    <p>Join our Discord and create a ticket to purchase.</p>
+  </div>
+
+  <div class="faq-item" onclick="toggleFAQ(this)">
+    Do you support plugins & mods?
+    <p>Yes, we support plugins and most modpacks.</p>
+  </div>
+
+  <div class="faq-item" onclick="toggleFAQ(this)">
+    Is setup instant?
+    <p>Yes, servers are delivered instantly after payment.</p>
+  </div>
+
+  <div class="faq-item" onclick="toggleFAQ(this)">
+    Do you provide support?
+    <p>Yes, 24/7 support via Discord.</p>
+  </div>
+
+</section>
+
+<!-- 🚀 CTA -->
+<section class="cta reveal">
+  <h2>Ready to launch your server?</h2>
+  <p>Start your hosting journey with Dark Hosting today.</p>
+
+  <div class="cta-buttons">
+    <button class="primary" onclick="location.href='services.html'">
+      Get Started
+    </button>
+
+    <button class="secondary" onclick="window.open('https://discord.gg/Bnq87TZd')">
+      Join Discord
+    </button>
+  </div>
+</section>
+
+<<!-- 🔥 FINAL FOOTER (GRADIENT + FULL LINKS) -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2 class="logo-text">Dark Hosting</h2>
+      <p>Fast, reliable and secure hosting built for performance.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Navigation</h3>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="location.html">Locations</a>
+      <a href="minecraft.html">Minecraft</a>
+      <a href="vps.html">VPS</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Hosting</h3>
+      <a href="minecraft.html">Minecraft Hosting</a>
+      <a href="vps.html">VPS Plans</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Community</h3>
+      <a href="https://discord.gg/Bnq87TZd" target="_blank">Discord</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Dark Hosting • All Rights Reserved
+  </div>
+</footer>
+
+<script>
+function toggleFAQ(el){
+  el.classList.toggle("active");
+}
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll('.reveal').forEach(el=>{
+  observer.observe(el);
+});
+</script>
+
+</body>
+  </html>
+  

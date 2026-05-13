@@ -391,4 +391,231 @@ box-shadow:0 0 15px #22c55e;animation:nodepulse 1.5s infinite;}
       <h2>Ultra</h2>
       <div class="price">₹399/month</div>
       <ul><li>12GB RAM</li><li>120GB NVMe</li><li>DDoS Protection</li><li>70-100 Players</li></ul>
-      <button class="buy" onclick="window.open('https://discord.gg/ajGT37QCSx ')
+      <button class="buy" onclick="window.open('https://discord.gg/ajGT37QCSx ')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get Server</p>
+    </div>
+    <div class="plan reveal">
+      <h2>Extreme</h2>
+      <div class="price">₹499/month</div>
+      <ul><li>16GB RAM</li><li>160GB NVMe</li><li>DDoS Protection</li><li>100+ Players</li></ul>
+      <button class="buy" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get Server</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box"><h2 class="logo-text">Dark Hosting</h2><p>Fast, reliable and secure hosting built for performance.</p></div>
+      <div class="footer-box"><h3>Navigation</h3><a onclick="showPage('home')">Home</a><a onclick="showPage('services')">Services</a><a onclick="showPage('locations')">Locations</a><a onclick="showPage('minecraft')">Minecraft</a><a onclick="showPage('vps')">VPS</a></div>
+      <div class="footer-box"><h3>Hosting</h3><a onclick="showPage('minecraft')">Minecraft Hosting</a><a onclick="showPage('vps')">VPS Plans</a></div>
+      <div class="footer-box"><h3>Community</h3><a href="https://discord.gg/ajGT37QCSx" target="_blank">Discord</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 Dark Hosting • All Rights Reserved</div>
+  </footer>
+</div>
+
+<!-- ==================== VPS PAGE ==================== -->
+<div id="page-vps" class="page">
+  <section class="pricing-hero reveal">
+    <h1 class="pricing-hero-vps">AMD Ryzen <span style="background:linear-gradient(90deg,#facc15,#a855f7);-webkit-background-clip:text;color:transparent;">VPS Plans</span></h1>
+    <p>High performance VPS for developers &amp; servers</p>
+    <div class="trust">✔ NVMe Storage &nbsp;•&nbsp; ✔ Instant Setup &nbsp;•&nbsp; ✔ Full Root Access &nbsp;•&nbsp; ✔ 24/7 Support</div>
+  </section>
+
+  <section class="pricing-grid">
+    <div class="plan reveal">
+      <h2>Starter VPS</h2>
+      <div class="price-vps">₹199/mo</div>
+      <ul><li>1 vCPU</li><li>2GB RAM</li><li>30GB NVMe</li><li>1TB Bandwidth</li></ul>
+      <button class="buy buy-vps" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get VPS</p>
+    </div>
+    <div class="plan reveal">
+      <h2>Basic VPS</h2>
+      <div class="price-vps">₹299/mo</div>
+      <ul><li>2 vCPU</li><li>4GB RAM</li><li>60GB NVMe</li><li>2TB Bandwidth</li></ul>
+      <button class="buy buy-vps" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get VPS</p>
+    </div>
+    <div class="plan best-value reveal">
+      <h2>Advanced VPS</h2>
+      <div class="price-vps">₹399/mo</div>
+      <ul><li>3 vCPU</li><li>6GB RAM</li><li>90GB NVMe</li><li>3TB Bandwidth</li></ul>
+      <button class="buy buy-vps" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get VPS</p>
+    </div>
+    <div class="plan reveal">
+      <h2>Pro VPS</h2>
+      <div class="price-vps">₹499/mo</div>
+      <ul><li>4 vCPU</li><li>8GB RAM</li><li>120GB NVMe</li><li>4TB Bandwidth</li></ul>
+      <button class="buy buy-vps" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get VPS</p>
+    </div>
+    <div class="plan reveal">
+      <h2>Elite VPS</h2>
+      <div class="price-vps">₹699/mo</div>
+      <ul><li>6 vCPU</li><li>12GB RAM</li><li>180GB NVMe</li><li>Unlimited Bandwidth</li></ul>
+      <button class="buy buy-vps" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get VPS</p>
+    </div>
+    <div class="plan reveal">
+      <h2>Ultimate VPS</h2>
+      <div class="price-vps">₹899/mo</div>
+      <ul><li>8 vCPU</li><li>16GB RAM</li><li>240GB NVMe</li><li>Unlimited Bandwidth</li></ul>
+      <button class="buy buy-vps" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get VPS</p>
+    </div>
+    <div class="plan reveal">
+      <h2>Enterprise VPS</h2>
+      <div class="price-vps">₹1199/mo</div>
+      <ul><li>10 vCPU</li><li>20GB RAM</li><li>320GB NVMe</li><li>Unlimited Bandwidth</li></ul>
+      <button class="buy buy-vps" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get VPS</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box"><h2 class="logo-text">Dark Hosting</h2><p>Fast, reliable and secure hosting built for performance.</p></div>
+      <div class="footer-box"><h3>Navigation</h3><a onclick="showPage('home')">Home</a><a onclick="showPage('services')">Services</a><a onclick="showPage('locations')">Locations</a><a onclick="showPage('minecraft')">Minecraft</a><a onclick="showPage('vps')">VPS</a></div>
+      <div class="footer-box"><h3>Hosting</h3><a onclick="showPage('minecraft')">Minecraft Hosting</a><a onclick="showPage('vps')">VPS Plans</a></div>
+      <div class="footer-box"><h3>Community</h3><a href="https://discord.gg/ajGT37QCSx" target="_blank">Discord</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 Dark Hosting • All Rights Reserved</div>
+  </footer>
+</div>
+
+<!-- ==================== LOCATIONS PAGE ==================== -->
+<div id="page-locations" class="page">
+  <section class="map-section reveal">
+    <h1>Our <span>Server Locations</span></h1>
+    <p class="sub">Global infrastructure for low latency and high performance</p>
+
+    <!-- SVG world map with nodes -->
+    <div class="map-box">
+      <svg class="map-svg" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simplified world map paths -->
+        <g fill="rgba(99,102,241,0.15)" stroke="rgba(139,92,246,0.3)" stroke-width="0.8">
+          <!-- North America -->
+          <path d="M60,80 L200,70 L240,100 L230,160 L180,200 L140,210 L90,190 L60,160 Z"/>
+          <!-- Central America -->
+          <path d="M140,210 L180,200 L190,230 L160,250 L140,240 Z"/>
+          <!-- South America -->
+          <path d="M150,260 L220,250 L260,300 L250,380 L200,420 L160,400 L140,360 L145,300 Z"/>
+          <!-- Europe -->
+          <path d="M380,70 L470,60 L490,100 L460,130 L410,140 L380,120 Z"/>
+          <!-- Africa -->
+          <path d="M390,150 L470,140 L490,180 L480,280 L440,320 L400,310 L380,260 L385,190 Z"/>
+          <!-- Asia -->
+          <path d="M490,60 L700,50 L750,90 L740,170 L680,200 L600,190 L530,160 L490,120 Z"/>
+          <!-- Middle East -->
+          <path d="M470,140 L550,130 L560,180 L510,200 L470,185 Z"/>
+          <!-- South Asia -->
+          <path d="M560,160 L640,150 L650,200 L620,240 L570,230 L550,200 Z"/>
+          <!-- Southeast Asia -->
+          <path d="M660,180 L730,170 L750,210 L720,240 L680,230 L655,210 Z"/>
+          <!-- Australia -->
+          <path d="M680,310 L780,300 L800,360 L770,400 L710,400 L680,370 Z"/>
+          <!-- UK/Ireland -->
+          <path d="M365,80 L385,75 L390,100 L370,105 Z"/>
+        </g>
+        <!-- Grid lines -->
+        <line x1="0" y1="250" x2="900" y2="250" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="450" y1="0" x2="450" y2="500" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+      </svg>
+
+      <!-- Nodes positioned over map -->
+      <!-- India: ~67% left, 52% top -->
+      <div class="node" style="top:47%;left:67%;">
+        <div class="node-label">🇮🇳 India</div>
+      </div>
+      <!-- Europe: ~48% left, 28% top -->
+      <div class="node" style="top:26%;left:46%;">
+        <div class="node-label">🇩🇪 Europe</div>
+      </div>
+      <!-- USA: ~22% left, 38% top -->
+      <div class="node" style="top:36%;left:20%;">
+        <div class="node-label">🇺🇸 USA</div>
+      </div>
+      <!-- Singapore: ~78% left, 58% top -->
+      <div class="node" style="top:54%;left:76%;">
+        <div class="node-label">🇸🇬 Singapore</div>
+      </div>
+    </div>
+
+    <!-- Location Cards -->
+    <div class="location-cards">
+      <div class="loc-card">
+        <div class="loc-dot"></div>
+        <h3>🇮🇳 India</h3>
+        <p>Mumbai Node<br><span style="color:#22c55e;font-size:12px;">● Active</span></p>
+      </div>
+      <div class="loc-card">
+        <div class="loc-dot"></div>
+        <h3>🇩🇪 Europe</h3>
+        <p>Frankfurt Node<br><span style="color:#22c55e;font-size:12px;">● Active</span></p>
+      </div>
+      <div class="loc-card">
+        <div class="loc-dot"></div>
+        <h3>🇺🇸 USA</h3>
+        <p>New York Node<br><span style="color:#22c55e;font-size:12px;">● Active</span></p>
+      </div>
+      <div class="loc-card">
+        <div class="loc-dot"></div>
+        <h3>🇸🇬 Singapore</h3>
+        <p>Singapore Node<br><span style="color:#22c55e;font-size:12px;">● Active</span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box"><h2 class="logo-text">Dark Hosting</h2><p>Fast, reliable and secure hosting built for performance.</p></div>
+      <div class="footer-box"><h3>Navigation</h3><a onclick="showPage('home')">Home</a><a onclick="showPage('services')">Services</a><a onclick="showPage('locations')">Locations</a><a onclick="showPage('minecraft')">Minecraft</a><a onclick="showPage('vps')">VPS</a></div>
+      <div class="footer-box"><h3>Hosting</h3><a onclick="showPage('minecraft')">Minecraft Hosting</a><a onclick="showPage('vps')">VPS Plans</a></div>
+      <div class="footer-box"><h3>Community</h3><a href="https://discord.gg/ajGT37QCSx" target="_blank">Discord</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 Dark Hosting • All Rights Reserved</div>
+  </footer>
+</div>
+
+<script>
+// ===== PAGE ROUTER =====
+function showPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  // trigger reveal animations for the new page
+  setTimeout(()=>{
+    document.getElementById('page-'+name).querySelectorAll('.reveal').forEach(el=>{
+      observer.observe(el);
+    });
+  }, 50);
+}
+
+// ===== SERVICES TABS =====
+function showServiceTab(type){
+  document.querySelectorAll('.service-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+type).classList.add('active');
+  document.querySelectorAll('.sidebar a').forEach(a=>a.classList.remove('active-tab'));
+  document.getElementById('tab-'+type).classList.add('active-tab');
+}
+
+// ===== FAQ TOGGLE =====
+function toggleFAQ(el){
+  el.classList.toggle('active');
+}
+
+// ===== REVEAL OBSERVER =====
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.1});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

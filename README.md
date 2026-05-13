@@ -1,1 +1,394 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Hosting</title>
+<style>
+/* ===== RESET & GLOBAL ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+body{background:linear-gradient(135deg,#070816,#0d1026,#111536);color:#fff;overflow-x:hidden;}
+
+/* ===== BACKGROUND ===== */
+.bg{position:fixed;width:100%;height:100%;z-index:-1;
+background:
+  radial-gradient(circle at 20% 30%,rgba(99,102,241,0.25),transparent 40%),
+  radial-gradient(circle at 80% 70%,rgba(168,85,247,0.2),transparent 40%);}
+
+/* ===== NAVBAR ===== */
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 30px;
+background:rgba(10,12,30,0.7);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.08);
+position:sticky;top:0;z-index:100;}
+.logo-box{display:flex;align-items:center;cursor:pointer;}
+.logo-img{width:35px;margin-right:8px;}
+.logo-text{font-weight:700;background:linear-gradient(90deg,#6366f1,#8b5cf6,#a855f7);
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:0.5px;}
+.navbar nav a{margin:0 10px;color:#aaa;text-decoration:none;transition:0.3s;cursor:pointer;background:none;border:none;font-size:14px;}
+.navbar nav a:hover{color:#8b5cf6;}
+
+/* ===== PAGES ===== */
+.page{display:none;}
+.page.active{display:block;}
+
+/* ===== HERO ===== */
+.hero{display:flex;justify-content:space-between;align-items:center;padding:80px 40px;flex-wrap:wrap;}
+.hero-left{max-width:500px;}
+.hero-left h1{font-size:42px;margin-bottom:10px;}
+.hero-left span{color:#8b5cf6;text-shadow:0 0 15px rgba(139,92,246,0.7);}
+.hero-buttons{margin-top:15px;}
+
+/* ===== BUTTONS ===== */
+.primary,.secondary{padding:10px 20px;border:none;border-radius:8px;cursor:pointer;margin-right:10px;font-size:14px;}
+.primary{background:linear-gradient(90deg,#6366f1,#8b5cf6);color:white;}
+.secondary{background:#111;color:white;border:1px solid #333;}
+.primary:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 0 25px rgba(139,92,246,0.8);}
+
+/* ===== GLASS CARD ===== */
+.glass-card{display:grid;grid-template-columns:1fr 1fr;gap:15px;background:rgba(255,255,255,0.06);
+padding:20px;border-radius:16px;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.1);}
+.box{text-align:center;}
+
+/* ===== SUB ===== */
+.sub{color:#aaa;margin-top:6px;}
+
+/* ===== OWNERS ===== */
+.owners{text-align:center;margin-top:60px;padding:0 20px;}
+.owners-box{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:30px;}
+.owner{padding:25px;border-radius:18px;width:280px;background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.1);transition:0.4s;}
+.owner:hover{transform:translateY(-12px) scale(1.05);box-shadow:0 0 40px rgba(139,92,246,0.7);}
+
+/* ===== FEATURES ===== */
+.features{text-align:center;margin-top:60px;padding:0 20px;}
+.feature-grid{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:30px;}
+.fbox{background:rgba(255,255,255,0.06);padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,0.1);transition:0.4s;}
+.fbox:hover{transform:translateY(-10px);box-shadow:0 0 35px rgba(99,102,241,0.7);}
+
+/* ===== REVIEWS ===== */
+.reviews{text-align:center;margin-top:70px;padding:0 20px;}
+.review-box{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:30px;}
+.review-card{width:260px;padding:20px;border-radius:16px;background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(10px);transition:0.3s;}
+.review-card:hover{transform:translateY(-10px);box-shadow:0 0 30px rgba(139,92,246,0.6);}
+.stars{color:gold;margin:5px 0;}
+
+/* ===== FAQ ===== */
+.faq{text-align:center;margin-top:60px;padding:0 20px;}
+.faq-item{background:rgba(255,255,255,0.06);margin:15px auto;padding:18px;width:65%;
+border-radius:12px;cursor:pointer;position:relative;border:1px solid rgba(255,255,255,0.1);transition:0.3s;text-align:left;}
+.faq-item:hover{background:rgba(255,255,255,0.08);transform:scale(1.02);}
+.faq-item::after{content:"+";position:absolute;right:20px;top:18px;font-size:20px;}
+.faq-item.active::after{content:"−";}
+.faq-item p{max-height:0;overflow:hidden;opacity:0;transition:0.4s;}
+.faq-item.active p{max-height:200px;opacity:1;margin-top:10px;color:#aaa;}
+
+/* ===== CTA ===== */
+.cta{text-align:center;margin-top:80px;padding:60px 20px;border-radius:20px;
+background:linear-gradient(90deg,#6366f1,#8b5cf6);box-shadow:0 0 40px rgba(139,92,246,0.6);margin-left:20px;margin-right:20px;}
+.cta p{color:#ddd;margin:10px 0 20px;}
+.cta-buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+
+/* ===== FOOTER ===== */
+.footer{margin-top:80px;padding:60px 20px 20px;background:linear-gradient(180deg,#06071a,#02030a);
+border-top:1px solid rgba(255,255,255,0.08);box-shadow:0 -10px 40px rgba(99,102,241,0.2);}
+.footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;}
+.footer-box h3{margin-bottom:15px;color:#fff;}
+.footer-box p{color:#aaa;margin-top:8px;font-size:14px;}
+.footer-box a{display:block;color:#aaa;text-decoration:none;margin-bottom:8px;font-size:14px;transition:0.3s;cursor:pointer;}
+.footer-box a:hover{color:#8b5cf6;}
+.footer-bottom{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06);color:#555;font-size:13px;}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:0.6s ease;}
+.reveal.show{opacity:1;transform:translateY(0);}
+
+/* ===== SERVICES PAGE ===== */
+.services-main{display:flex;padding:80px 40px;gap:30px;min-height:60vh;}
+.sidebar{width:220px;background:rgba(255,255,255,0.05);border-radius:15px;padding:20px;height:fit-content;}
+.sidebar h3{margin-bottom:15px;color:#fff;}
+.sidebar a{display:block;padding:10px;margin-bottom:10px;color:#aaa;text-decoration:none;border-radius:8px;transition:0.3s;cursor:pointer;}
+.sidebar a:hover,.sidebar a.active-tab{background:#1a1a2e;color:white;}
+.content{flex:1;}
+.service-panel{display:none;animation:fade 0.5s ease;}
+.service-panel.active{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.card{background:rgba(255,255,255,0.05);padding:25px;border-radius:15px;margin-bottom:20px;transition:0.3s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 0 20px #6366f1;}
+.card h2{margin-bottom:10px;}
+.card p{color:#aaa;margin-bottom:15px;line-height:1.6;}
+
+/* ===== PRICING PAGES ===== */
+.pricing-hero{text-align:center;padding:100px 20px 40px;}
+.pricing-hero h1{font-size:45px;}
+.pricing-hero span{background:linear-gradient(90deg,#6366f1,#8b5cf6);-webkit-background-clip:text;color:transparent;}
+.pricing-hero-vps span{background:linear-gradient(90deg,#facc15,#a855f7);-webkit-background-clip:text;color:transparent;}
+.trust{margin-top:10px;color:#aaa;font-size:14px;}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;padding:40px 60px;}
+.plan{background:rgba(255,255,255,0.05);padding:25px;border-radius:18px;transition:0.3s;position:relative;overflow:hidden;}
+.plan:hover{transform:translateY(-8px);box-shadow:0 10px 40px rgba(99,102,241,0.35);}
+.plan.popular{border:2px solid #8b5cf6;}
+.plan.popular::before{content:"MOST POPULAR";position:absolute;top:14px;right:-38px;background:#8b5cf6;
+padding:5px 45px;transform:rotate(45deg);font-size:11px;}
+.plan.best-value{border:2px solid #a855f7;}
+.plan.best-value::before{content:"BEST VALUE";position:absolute;top:14px;right:-38px;background:#a855f7;
+padding:5px 45px;transform:rotate(45deg);font-size:11px;}
+.price{font-size:28px;margin:10px 0;color:#6366f1;}
+.price-vps{font-size:28px;margin:10px 0;color:#a855f7;}
+.plan ul{list-style:none;margin:15px 0;}
+.plan li{color:#aaa;margin:6px 0;font-size:14px;}
+.plan li::before{content:"✓ ";color:#6366f1;}
+.buy{width:100%;padding:12px;border:none;border-radius:10px;
+background:linear-gradient(90deg,#6366f1,#8b5cf6);color:white;cursor:pointer;transition:0.3s;font-size:14px;}
+.buy-vps{background:linear-gradient(90deg,#facc15,#a855f7);}
+.buy:hover{transform:scale(1.05);box-shadow:0 0 20px #6366f1;}
+.note{font-size:12px;color:#888;margin-top:8px;text-align:center;}
+.plan h2{font-size:20px;}
+
+/* ===== LOCATIONS PAGE ===== */
+.map-section{text-align:center;padding:100px 20px 60px;}
+.map-section h1{font-size:42px;}
+.map-section span{background:linear-gradient(90deg,#6366f1,#8b5cf6);-webkit-background-clip:text;color:transparent;}
+.map-box{position:relative;max-width:900px;margin:50px auto;background:rgba(255,255,255,0.03);
+border-radius:20px;border:1px solid rgba(255,255,255,0.08);padding:20px;overflow:hidden;}
+.map-svg{width:100%;height:auto;opacity:0.7;}
+.node{position:absolute;width:14px;height:14px;background:#22c55e;border-radius:50%;
+box-shadow:0 0 15px #22c55e;animation:nodepulse 1.5s infinite;}
+@keyframes nodepulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,0.7)}70%{box-shadow:0 0 0 14px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.node-label{position:absolute;top:16px;left:50%;transform:translateX(-50%);font-size:11px;color:#aaa;white-space:nowrap;}
+.location-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:900px;margin:40px auto;padding:0 20px;}
+.loc-card{background:rgba(255,255,255,0.05);padding:20px;border-radius:14px;border:1px solid rgba(255,255,255,0.08);text-align:center;transition:0.3s;}
+.loc-card:hover{transform:translateY(-5px);box-shadow:0 0 20px rgba(34,197,94,0.3);}
+.loc-dot{width:10px;height:10px;background:#22c55e;border-radius:50%;margin:0 auto 10px;box-shadow:0 0 10px #22c55e;}
+.loc-card h3{font-size:16px;margin-bottom:4px;}
+.loc-card p{color:#aaa;font-size:13px;}
+
+/* DISCORD link style in nav */
+.nav-discord{color:#8b5cf6 !important;font-weight:600;}
+.nav-discord:hover{color:#a78bfa !important;}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="logo-box" onclick="showPage('home')">
+    <svg class="logo-img" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="18" fill="url(#lg1)" opacity="0.9"/>
+      <path d="M13 20 L20 13 L27 20 L20 27 Z" fill="white" opacity="0.9"/>
+      <path d="M20 13 L20 27" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <path d="M13 20 L27 20" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+    </svg>
+    <span class="logo-text">Dark Hosting</span>
+  </div>
+  <nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('services')">Services</a>
+    <a onclick="showPage('locations')">Locations</a>
+    <a onclick="showPage('home');setTimeout(()=>document.getElementById('features').scrollIntoView({behavior:'smooth'}),100)">Features</a>
+    <a onclick="showPage('home');setTimeout(()=>document.getElementById('faq').scrollIntoView({behavior:'smooth'}),100)">FAQ</a>
+    <a href="https://discord.gg/ajGT37QCSx" target="_blank" class="nav-discord">Discord</a>
+  </nav>
+</header>
+
+<!-- ==================== HOME PAGE ==================== -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero reveal">
+    <div class="hero-left">
+      <h1>Power your servers with <span>dark hosting</span></h1>
+      <p>Fast, reliable and secure hosting built for performance.</p>
+      <div class="hero-buttons">
+        <button class="primary" onclick="showPage('services')">Get Started</button>
+        <button class="secondary" onclick="window.open('https://discord.gg/ajGT37QCSx')">Join Discord</button>
+      </div>
+    </div>
+    <div class="hero-right" style="margin-top:20px;">
+      <div class="glass-card">
+        <div class="box"><h3>99.9%</h3><p>Uptime</p></div>
+        <div class="box"><h3>Low Ping</h3><p>India Nodes</p></div>
+        <div class="box"><h3>NVMe</h3><p>Fast Storage</p></div>
+        <div class="box"><h3>24/7</h3><p>Support</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OWNERS -->
+  <section class="owners reveal">
+    <h2>Meet Our Owners</h2>
+    <p class="sub">People behind Dark Hosting</p>
+    <div class="owners-box">
+      <div class="owner">
+        <h3>THE_GAMING_ZONE</h3>
+        <p style="color:#aaa;margin-top:8px;">Founder • Handles development, servers and backend systems.</p>
+      </div>
+      <div class="owner">
+        <h3>ITZ DRAGON YT</h3>
+        <p style="color:#aaa;margin-top:8px;">Founder • Handles security, backend infrastructure and protection systems.</p>
+      </div>
+      <div class="owner">
+        <h3>CONICDARK</h3>
+        <p style="color:#aaa;margin-top:8px;">Co-Founder • Handles support, management and user experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features reveal" id="features">
+    <h2>Why Dark Hosting?</h2>
+    <div class="feature-grid">
+      <div class="fbox"><h3>⚡ Fast Servers</h3></div>
+      <div class="fbox"><h3>🌍 Low Latency</h3></div>
+      <div class="fbox"><h3>🔒 Secure</h3></div>
+      <div class="fbox"><h3>🛠 Easy Panel</h3></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews reveal">
+    <h2>What Customers Say</h2>
+    <p class="sub">Trusted by our community</p>
+    <div class="review-box">
+      <div class="review-card">
+        <h3>Rohan</h3>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p>Low ping and smooth gameplay. Best hosting I've used.</p>
+      </div>
+      <div class="review-card">
+        <h3>Amit</h3>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p>Setup was instant and support is very fast.</p>
+      </div>
+      <div class="review-card">
+        <h3>Sahil</h3>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p>Affordable pricing and no lag. Highly recommended.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq reveal" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item" onclick="toggleFAQ(this)">What is Dark Hosting?<p>We provide high-performance Minecraft and VPS hosting.</p></div>
+    <div class="faq-item" onclick="toggleFAQ(this)">How can I buy a server?<p>Join our Discord and create a ticket to purchase.</p></div>
+    <div class="faq-item" onclick="toggleFAQ(this)">Do you support plugins &amp; mods?<p>Yes, we support plugins and most modpacks.</p></div>
+    <div class="faq-item" onclick="toggleFAQ(this)">Is setup instant?<p>Yes, servers are delivered instantly after payment.</p></div>
+    <div class="faq-item" onclick="toggleFAQ(this)">Do you provide support?<p>Yes, 24/7 support via Discord.</p></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal">
+    <h2>Ready to launch your server?</h2>
+    <p>Start your hosting journey with Dark Hosting today.</p>
+    <div class="cta-buttons">
+      <button class="primary" onclick="showPage('services')">Get Started</button>
+      <button class="secondary" onclick="window.open('https://discord.gg/ajGT37QCSx')">Join Discord</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h2 class="logo-text">Dark Hosting</h2>
+        <p>Fast, reliable and secure hosting built for performance.</p>
+      </div>
+      <div class="footer-box">
+        <h3>Navigation</h3>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('services')">Services</a>
+        <a onclick="showPage('locations')">Locations</a>
+        <a onclick="showPage('minecraft')">Minecraft</a>
+        <a onclick="showPage('vps')">VPS</a>
+      </div>
+      <div class="footer-box">
+        <h3>Hosting</h3>
+        <a onclick="showPage('minecraft')">Minecraft Hosting</a>
+        <a onclick="showPage('vps')">VPS Plans</a>
+      </div>
+      <div class="footer-box">
+        <h3>Community</h3>
+        <a href="https://discord.gg/ajGT37QCSx" target="_blank">Discord</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Dark Hosting • All Rights Reserved</div>
+  </footer>
+</div>
+
+<!-- ==================== SERVICES PAGE ==================== -->
+<div id="page-services" class="page">
+  <div class="services-main">
+    <div class="sidebar">
+      <h3>Categories</h3>
+      <a onclick="showServiceTab('mc')" id="tab-mc" class="active-tab">🎮 Minecraft Hosting</a>
+      <a onclick="showServiceTab('vps')" id="tab-vps">☁️ VPS Hosting</a>
+    </div>
+    <div class="content">
+      <div id="panel-mc" class="service-panel active">
+        <div class="card">
+          <h2>Minecraft Hosting</h2>
+          <p>Experience ultra-fast Minecraft hosting with optimized performance, low latency, and powerful hardware. Perfect for survival servers, modpacks, and large communities.</p>
+          <button class="primary" onclick="showPage('minecraft')">View Plans</button>
+        </div>
+      </div>
+      <div id="panel-vps" class="service-panel">
+        <div class="card">
+          <h2>AMD VPS Hosting</h2>
+          <p>Get high-performance VPS powered by AMD Ryzen CPUs. Ideal for hosting websites, bots, game servers, and more with full root access and maximum control.</p>
+          <button class="primary" onclick="showPage('vps')">View Plans</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box"><h2 class="logo-text">Dark Hosting</h2><p>Fast, reliable and secure hosting built for performance.</p></div>
+      <div class="footer-box"><h3>Navigation</h3><a onclick="showPage('home')">Home</a><a onclick="showPage('services')">Services</a><a onclick="showPage('locations')">Locations</a><a onclick="showPage('minecraft')">Minecraft</a><a onclick="showPage('vps')">VPS</a></div>
+      <div class="footer-box"><h3>Hosting</h3><a onclick="showPage('minecraft')">Minecraft Hosting</a><a onclick="showPage('vps')">VPS Plans</a></div>
+      <div class="footer-box"><h3>Community</h3><a href="https://discord.gg/ajGT37QCSx" target="_blank">Discord</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 Dark Hosting • All Rights Reserved</div>
+  </footer>
+</div>
+
+<!-- ==================== MINECRAFT PAGE ==================== -->
+<div id="page-minecraft" class="page">
+  <section class="pricing-hero reveal">
+    <h1>Minecraft <span>Hosting Plans</span></h1>
+    <p>Powerful, lag-free servers for every player size</p>
+    <div class="trust">✔ Instant Setup &nbsp;•&nbsp; ✔ India Servers &nbsp;•&nbsp; ✔ No Lag &nbsp;•&nbsp; ✔ 24/7 Support</div>
+  </section>
+
+  <section class="pricing-grid">
+    <div class="plan reveal">
+      <h2>Starter</h2>
+      <div class="price">₹99/month</div>
+      <ul><li>3GB RAM</li><li>25GB SSD</li><li>DDoS Protection</li><li>10-20 Players</li></ul>
+      <button class="buy" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get Server</p>
+    </div>
+    <div class="plan popular reveal">
+      <h2>Plus</h2>
+      <div class="price">₹179/month</div>
+      <ul><li>6GB RAM</li><li>50GB NVMe</li><li>DDoS Protection</li><li>20-40 Players</li></ul>
+      <button class="buy" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get Server</p>
+    </div>
+    <div class="plan reveal">
+      <h2>Pro</h2>
+      <div class="price">₹299/month</div>
+      <ul><li>8GB RAM</li><li>80GB NVMe</li><li>DDoS Protection</li><li>40-70 Players</li></ul>
+      <button class="buy" onclick="window.open('https://discord.gg/ajGT37QCSx')">Buy Now</button>
+      <p class="note">Join Discord → Create Ticket → Get Server</p>
+    </div>
+    <div class="plan reveal">
+      <h2>Ultra</h2>
+      <div class="price">₹399/month</div>
+      <ul><li>12GB RAM</li><li>120GB NVMe</li><li>DDoS Protection</li><li>70-100 Players</li></ul>
+      <button class="buy" onclick="window.open('https://discord.gg/ajGT37QCSx ')

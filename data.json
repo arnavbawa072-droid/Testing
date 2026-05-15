@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "nextUserId": 2,
+    "nextPlanId": 11,
+    "nextNodeId": 5
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "Admin",
+      "email": "admin@darkhosting.com",
+      "password": "Admin@1234",
+      "isAdmin": true,
+      "joinedAt": "01/01/2026"
+    }
+  ],
+  "plans": [
+    {"id":1,"name":"Starter","type":"minecraft","price":99,"badge":"","features":["3GB RAM","25GB SSD","DDoS Protection","10-20 Players"]},
+    {"id":2,"name":"Plus","type":"minecraft","price":179,"badge":"popular","features":["6GB RAM","50GB NVMe","DDoS Protection","20-40 Players"]},
+    {"id":3,"name":"Pro","type":"minecraft","price":299,"badge":"","features":["8GB RAM","80GB NVMe","DDoS Protection","40-70 Players"]},
+    {"id":4,"name":"Ultra","type":"minecraft","price":399,"badge":"","features":["12GB RAM","120GB NVMe","DDoS Protection","70-100 Players"]},
+    {"id":5,"name":"Extreme","type":"minecraft","price":499,"badge":"","features":["16GB RAM","160GB NVMe","DDoS Protection","100+ Players"]},
+    {"id":6,"name":"Starter VPS","type":"vps","price":199,"badge":"","features":["1 vCPU","2GB RAM","30GB NVMe","1TB Bandwidth"]},
+    {"id":7,"name":"Basic VPS","type":"vps","price":299,"badge":"","features":["2 vCPU","4GB RAM","60GB NVMe","2TB Bandwidth"]},
+    {"id":8,"name":"Advanced VPS","type":"vps","price":399,"badge":"best-value","features":["3 vCPU","6GB RAM","90GB NVMe","3TB Bandwidth"]},
+    {"id":9,"name":"Pro VPS","type":"vps","price":499,"badge":"","features":["4 vCPU","8GB RAM","120GB NVMe","4TB Bandwidth"]},
+    {"id":10,"name":"Elite VPS","type":"vps","price":699,"badge":"","features":["6 vCPU","12GB RAM","180GB NVMe","Unlimited Bandwidth"]}
+  ],
+  "nodes": [
+    {"id":1,"name":"🇮🇳 India","location":"Mumbai Node","active":true,"top":47,"left":67},
+    {"id":2,"name":"🇩🇪 Europe","location":"Frankfurt Node","active":true,"top":26,"left":46},
+    {"id":3,"name":"🇺🇸 USA","location":"New York Node","active":true,"top":36,"left":20},
+    {"id":4,"name":"🇸🇬 Singapore","location":"Singapore Node","active":true,"top":54,"left":76}
+  ]
+}
